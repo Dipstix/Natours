@@ -1,6 +1,5 @@
 .row {
   max-width: $grid-width;
-  background-color: #eee;
   margin: 0 auto;
 
   &:not(:last-child) {
@@ -9,18 +8,16 @@
 
   @include clearfix;
 
-  [class^="col-"] {
-      background-color: orangered;
-      float: left;
+  [class^='col-'] {
+    float: left;
 
-      &:not(:last-child) {
-          margin-right: $gutter-horizontal;
-      }
-          
+    &:not(:last-child) {
+      margin-right: $gutter-horizontal;
+    }
   }
 
   .col-1o2 {
-      width: calc((100% - #{$gutter-horizontal}) / 2);
+    width: calc((100% - #{$gutter-horizontal}) / 2);
   }
 
   .col-1o3 {
@@ -28,7 +25,9 @@
   }
 
   .col-2o3 {
-    width: calc(2 * ((100% - 2 * #{$gutter-horizontal}) / 3) + #{$gutter-horizontal});
+    width: calc(
+      2 * ((100% - 2 * #{$gutter-horizontal}) / 3) + #{$gutter-horizontal}
+    );
   }
 
   .col-1o4 {
@@ -36,10 +35,14 @@
   }
 
   .col-2o4 {
-    width: calc(2 * ((100% - 2 * #{$gutter-horizontal}) / 4) + #{$gutter-horizontal});
+    width: calc(
+      2 * ((100% - 2 * #{$gutter-horizontal}) / 4) + #{$gutter-horizontal}
+    );
   }
 
   .col-3o4 {
-    width: calc(3 * ((100% - 2 * #{$gutter-horizontal}) / 4) + 2 * #{$gutter-horizontal});
+    width: calc(
+      3 * ((100% - 2 * #{$gutter-horizontal}) / 4) + 2 * #{$gutter-horizontal}
+    );
   }
 }
